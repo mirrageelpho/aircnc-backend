@@ -6,9 +6,9 @@ module.exports = {
     const { tech } = req.query;
     let spots;
     if (!tech) {
-        spots = await Spot.find();
+        spots = await Spot.find().sort({_id:-1});;
     }else{
-        spots = await Spot.find({ techs: tech });
+        spots = await Spot.find({ techs: tech }).sort({_id:-1});;
     }
     return res.json(spots);
   },
