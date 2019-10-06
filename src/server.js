@@ -8,7 +8,8 @@ const routes = require("./routes");
 const app = express();
 mongoose.connect(link, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex:true
 });
 
 
